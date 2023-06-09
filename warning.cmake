@@ -49,7 +49,7 @@ function(
 		target_compile_options(${project_name} PUBLIC "-Werror")
 
 	else()
-		message(FATAL_ERROR "unable to enable compiler warnings")
+		message("unable to enable compiler warnings")
 	endif()
 
 	if(${ENABLE_WARNINGS})

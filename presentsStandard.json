@@ -1,0 +1,66 @@
+{
+  "version": 4,
+  "include": [ "presentsBase.json" ],
+  "configurePresets": [
+    {
+      "name": "windows-x64-debug",
+      "displayName": "windows-x64-debug",
+      "inherits": "nacmake-windows-x64-debug-base"
+    },
+    {
+      "name": "windows-x64-debug-prototyping",
+      "displayName": "windows-x64-debug-prototyping",
+      "inherits": "nacmake-windows-x64-debug-prototyping-base"
+    },
+    {
+      "name": "windows-x64-debug-profile",
+      "displayName": "windows-x64-debug-profile",
+      "inherits": "nacmake-windows-x64-debug-profile-base"
+    },
+    {
+      "name": "windows-x64-release",
+      "displayName": "windows-x64-release",
+      "inherits": "nacmake-windows-x64-release-base"
+    },
+    {
+      "name": "windows-x64-release-prototyping",
+      "displayName": "windows-x64-release-prototyping",
+      "inherits": "nacmake-windows-x64-release-prototyping-base"
+    },
+    {
+      "name": "windows-x64-release-profile",
+      "displayName": "windows-x64-release-profile",
+      "inherits": "nacmake-windows-x64-release-profile-base"
+    },
+    {
+      "name": "emscripten-debug",
+      "displayName": "emscripten-debug",
+      "inherits": "nacmake-emscripten-debug-base"
+    },
+    {
+      "name": "emscripten-debug-prototyping",
+      "displayName": "emscripten-debug-prototyping",
+      "inherits": "nacmake-emscripten-debug-prototyping-base"
+    },
+    {
+      "name": "emscripten-debug-profile",
+      "displayName": "emscripten-debug-profile",
+      "inherits": "nacmake-emscripten-debug-profile-base"
+    },
+    {
+      "name": "emscripten-release",
+      "displayName": "emscripten-release",
+      "inherits": "nacmake-emscripten-release-base"
+    },
+    {
+      "name": "emscripten-release-prototyping",
+      "displayName": "emscripten-release-prototyping",
+      "inherits": "nacmake-emscripten-release-prototyping-base"
+    },
+    {
+      "name": "emscripten-release-profile",
+      "displayName": "emscripten-release-profile",
+      "inherits": "nacmake-emscripten-release-profile-base"
+    }
+  ]
+}

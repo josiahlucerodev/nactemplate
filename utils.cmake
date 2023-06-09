@@ -11,7 +11,7 @@ endfunction()
 
 function(test_for_emscripten_compiler 
 	test_output)
-	if(CMAKE_CXX_COMPILER_ID STREQUAL "Emscripten")
+	if(CMAKE_CXX_COMPILER MATCHES "/em\\+\\+")
 		set(${test_output} TRUE PARENT_SCOPE)
 	elseif()
 		set(${test_output} FALSE PARENT_SCOPE)
@@ -22,7 +22,8 @@ function(exe_emscripten_setup
 	html_output)
 	test_for_emscripten_compiler(is_emscripten)
 	if(is_emscripten AND html_output)
-		set(CMAKE_EXECUTABLE_SUFFIX .html)
+		set(CMAKE_EXECUTABLE_SUFFIX .html PARENT_SCOPE)
+		message("html output")
 	endif()
 endfunction()
 
