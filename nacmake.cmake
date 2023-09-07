@@ -1,3 +1,5 @@
+project(nacmake)
+
 include(nacmake/dependency.cmake)
 include(nacmake/profile.cmake)
 include(nacmake/utils.cmake)
