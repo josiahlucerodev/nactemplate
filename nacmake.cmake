@@ -1,4 +1,4 @@
-project(nacmake)
+add_custom_target(nacmake)
 
 include(nacmake/dependency.cmake)
 include(nacmake/profile.cmake)
