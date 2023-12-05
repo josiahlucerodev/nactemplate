@@ -23,7 +23,6 @@ function(exe_emscripten_setup
 	test_for_emscripten_compiler(is_emscripten)
 	if(is_emscripten AND html_output)
 		set(CMAKE_EXECUTABLE_SUFFIX .html PARENT_SCOPE)
-		message("html output")
 	endif()
 endfunction()
 

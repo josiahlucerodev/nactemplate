@@ -61,7 +61,6 @@ function(
 		endif()
 	endif()
 
-	message(${project_name} "test")
 	target_compile_options(${project_name} PRIVATE ${cxx_warning_flags})
 	#set(warning_flags ${cxx_warning_flags} PARENT_SCOPE)
 endfunction()
