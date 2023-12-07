@@ -52,7 +52,7 @@ function(
 		message("unable to enable compiler warnings")
 	endif()
 
-	if(${ENABLE_WARNINGS})
+	if(${ENABLE_WARNINGS_AS_ERRORS})
 		if(MSVC)
 			list(APPEND cxx_warning_flags /WX)
 		elseif(CMAKE_CXX_COMPILER_ID MATCHES ".*Clang")
@@ -62,5 +62,4 @@ function(
 	endif()
 
 	target_compile_options(${project_name} PRIVATE ${cxx_warning_flags})
-	#set(warning_flags ${cxx_warning_flags} PARENT_SCOPE)
 endfunction()
