@@ -28,6 +28,10 @@ function(
 			/w14928
 			/permissive-)
 
+		string(REGEX REPLACE "/W[0-3]" "" CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}")
+		set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}" CACHE STRING "" FORCE)
+		string(REGEX REPLACE "/W[0-3]" "" CMAKE_C_FLAGS "${CMAKE_C_FLAGS}")
+		set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS}" CACHE STRING "" FORCE)
 	elseif(CMAKE_CXX_COMPILER_ID MATCHES ".*Clang")
 		set(cxx_warning_flags
 			-Wall
@@ -49,7 +53,7 @@ function(
 		target_compile_options(${project_name} PUBLIC "-Werror")
 
 	else()
-		message("unable to enable compiler warnings")
+		message("nacmake: unable to enable compiler warnings")
 	endif()
 
 	if(${ENABLE_WARNINGS_AS_ERRORS})
