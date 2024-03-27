@@ -61,6 +61,37 @@
       "name": "emscripten-release-profile",
       "displayName": "emscripten-release-profile",
       "inherits": "nacmake-emscripten-release-profile-base"
+    },
+    {
+      "name": "linux-x64-debug",
+      "displayName": "linux-x64-debug",
+      "inherits": "nacmake-linux-x64-debug-base"
+    },
+    {
+      "name": "linux-x64-debug-prototyping",
+      "displayName": "linux-x64-debug-prototyping",
+      "inherits": "nacmake-linux-x64-debug-prototyping-base"
+    },
+    {
+      "name": "linux-x64-debug-profile",
+      "displayName": "linux-x64-debug-profile",
+      "inherits": "nacmake-linux-x64-debug-profile-base"
+    },
+    {
+      "name": "linux-x64-release",
+      "displayName": "linux-x64-release",
+      "inherits": "nacmake-linux-x64-release-base"
+    },
+    {
+      "name": "linux-x64-release-prototyping",
+      "displayName": "linux-x64-release-prototyping",
+      "inherits": "nacmake-linux-x64-release-prototyping-base"
+    },
+    {
+      "name": "linux-x64-release-profile",
+      "displayName": "linux-x64-release-profile",
+      "inherits": "nacmake-linux-x64-release-profile-base"
     }
+
   ]
 }

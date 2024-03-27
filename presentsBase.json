@@ -106,6 +106,11 @@
         "microsoft.com/VisualStudioSettings/CMake/1.0": {
           "intelliSenseMode": "windows-clang-x64"
         }
+      },
+      "condition": {
+        "type": "matches",
+        "string": "$env{EMSDK}",
+        "regex": "emsdk"
       }
     },
     {
@@ -175,8 +180,8 @@
       }
     },
     {
-      "name": "linux-debug",
-      "displayName": "Linux Debug",
+      "name": "nacmake-linux-base",
+      "hidden": true,
       "generator": "Ninja",
       "binaryDir": "${sourceDir}/out/build/${presetName}",
       "installDir": "${sourceDir}/out/install/${presetName}",
@@ -189,9 +194,90 @@
         "rhs": "Linux"
       },
       "vendor": {
+        "microsoft.com/VisualStudioSettings/CMake/1.0": {
+          "hostOS": [ "Linux" ]
+        },
         "microsoft.com/VisualStudioRemoteSettings/CMake/1.0": {
           "sourceDir": "$env{HOME}/.vs/$ms{projectDirName}"
         }
+      }
+    },
+    {
+      "name": "nacmake-linux-x64-debug-base",
+      "hidden": true,
+      "inherits": "nacmake-linux-base",
+      "architecture": {
+        "value": "x64",
+        "strategy": "external"
+      },
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug",
+        "NACMAKE_PROFILE": "FALSE",
+        "NACMAKE_WARNINGS": "TRUE",
+        "NACMAKE_IPO": "TRUE"
+      }
+    },
+    {
+      "name": "nacmake-linux-x64-debug-prototyping-base",
+      "hidden": true,
+      "inherits": "nacmake-linux-base",
+      "architecture": {
+        "value": "x64",
+        "strategy": "external"
+      },
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug",
+        "NACMAKE_PROFILE": "FALSE",
+        "NACMAKE_WARNINGS": "FALSE",
+        "NACMAKE_IPO": "FALSE"
+      }
+    },
+    {
+      "name": "nacmake-linux-x64-debug-profile-base",
+      "hidden": true,
+      "inherits": "nacmake-linux-base",
+      "architecture": {
+        "value": "x64",
+        "strategy": "external"
+      },
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug",
+        "NACMAKE_PROFILE": "TRUE",
+        "NACMAKE_WARNINGS": "TRUE",
+        "NACMAKE_IPO": "TRUE"
+      }
+    },
+    {
+      "name": "nacmake-linux-x64-release-base",
+      "hidden": true,
+      "inherits": "nacmake-linux-x64-debug-base",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release",
+        "NACMAKE_PROFILE": "FALSE",
+        "NACMAKE_WARNINGS": "TRUE",
+        "NACMAKE_IPO": "TRUE"
+      }
+    },
+    {
+      "name": "nacmake-linux-x64-release-prototyping-base",
+      "hidden": true,
+      "inherits": "nacmake-linux-x64-debug-base",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release",
+        "NACMAKE_PROFILE": "FALSE",
+        "NACMAKE_WARNINGS": "FALSE",
+        "NACMAKE_IPO": "FALSE"
+      }
+    },
+    {
+      "name": "nacmake-linux-x64-release-profile-base",
+      "hidden": true,
+      "inherits": "nacmake-linux-x64-debug-base",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release",
+        "NACMAKE_PROFILE": "TRUE",
+        "NACMAKE_WARNINGS": "FALSE",
+        "NACMAKE_IPO": "FALSE"
       }
     },
     {

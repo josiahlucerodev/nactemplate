@@ -6,6 +6,23 @@ function(
 	#warning_flags
 
 	set(cxx_warning_flags "")
+	set(cxx_clang_warning_flags 
+			-Wall
+			-Wextra
+			-Wpedantic
+			-Wshadow
+			-Wold-style-cast
+			-Wcast-align
+			-Wunused 
+			-Woverloaded-virtual
+			-Wconversion
+			-Wsign-conversion
+			-Wnull-dereference
+			-Wdouble-promotion
+			-Wformat=2
+			-Wimplicit-fallthrough
+	)
+
 
 	if(MSVC)
 		set(cxx_warning_flags
@@ -34,24 +51,17 @@ function(
 		set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS}" CACHE STRING "" FORCE)
 	elseif(CMAKE_CXX_COMPILER_ID MATCHES ".*Clang")
 		set(cxx_warning_flags
-			-Wall
-			-Wextra
-			-Wpedantic
-			-Wshadow
-			-Wold-style-cast
-			-Wcast-align
-			-Wunused 
-			-Woverloaded-virtual
-			-Wconversion
-			-Wsign-conversion
-			-Wnull-dereference
-			-Wdouble-promotion
-			-Wformat=2
-			-Wimplicit-fallthrough
+			${cxx_clang_warning_flags}
 		)
-
-		target_compile_options(${project_name} PUBLIC "-Werror")
-
+	elseif(CMAKE_CXX_COMPILER_ID MATCHES ".*GNU")
+		set(cxx_warning_flags
+			${cxx_clang_warning_flags}
+			-Wmisleading-indentation 
+			-Wduplicated-cond 
+			-Wduplicated-branches
+			-Wlogical-op  
+			-Wsuggest-override
+		)
 	else()
 		message("nacmake: unable to enable compiler warnings")
 	endif()
@@ -61,7 +71,10 @@ function(
 			list(APPEND cxx_warning_flags /WX)
 		elseif(CMAKE_CXX_COMPILER_ID MATCHES ".*Clang")
 		    list(APPEND cxx_warning_flags -Werror)
+		elseif(CMAKE_CXX_COMPILER_ID MATCHES ".*GNU")
+		    list(APPEND cxx_warning_flags -Werror)
 		else()
+			message("nacmake: unable to enable compiler warnings as errors")
 		endif()
 	endif()
 
