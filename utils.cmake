@@ -18,11 +18,13 @@ function(test_for_emscripten_compiler
 	endif()
 endfunction() 
 
+
 function(exe_emscripten_setup
+	target_name
 	html_output)
 	test_for_emscripten_compiler(is_emscripten)
 	if(is_emscripten AND html_output)
-		set(CMAKE_EXECUTABLE_SUFFIX .html PARENT_SCOPE)
+		set_target_properties(${target_name} PROPERTIES SUFFIX ".html")
 	endif()
 endfunction()
 
@@ -35,4 +37,8 @@ function(set_standard_output
 		LIBRARY_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/lib"
 		RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin"
 	)
+endfunction()
+
+function(set_global_unity_build)
+	set(CMAKE_UNITY_BUILD ON CACHE)
 endfunction()
