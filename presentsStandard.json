@@ -5,92 +5,92 @@
     {
       "name": "windows-x64-debug",
       "displayName": "windows-x64-debug",
-      "inherits": "nacmake-windows-x64-debug-base"
+      "inherits": "nactemplate-windows-x64-debug-base"
     },
     {
       "name": "windows-x64-debug-prototyping",
       "displayName": "windows-x64-debug-prototyping",
-      "inherits": "nacmake-windows-x64-debug-prototyping-base"
+      "inherits": "nactemplate-windows-x64-debug-prototyping-base"
     },
     {
       "name": "windows-x64-debug-profile",
       "displayName": "windows-x64-debug-profile",
-      "inherits": "nacmake-windows-x64-debug-profile-base"
+      "inherits": "nactemplate-windows-x64-debug-profile-base"
     },
     {
       "name": "windows-x64-release",
       "displayName": "windows-x64-release",
-      "inherits": "nacmake-windows-x64-release-base"
+      "inherits": "nactemplate-windows-x64-release-base"
     },
     {
       "name": "windows-x64-release-prototyping",
       "displayName": "windows-x64-release-prototyping",
-      "inherits": "nacmake-windows-x64-release-prototyping-base"
+      "inherits": "nactemplate-windows-x64-release-prototyping-base"
     },
     {
       "name": "windows-x64-release-profile",
       "displayName": "windows-x64-release-profile",
-      "inherits": "nacmake-windows-x64-release-profile-base"
+      "inherits": "nactemplate-windows-x64-release-profile-base"
     },
     {
       "name": "emscripten-debug",
       "displayName": "emscripten-debug",
-      "inherits": "nacmake-emscripten-debug-base"
+      "inherits": "nactemplate-emscripten-debug-base"
     },
     {
       "name": "emscripten-debug-prototyping",
       "displayName": "emscripten-debug-prototyping",
-      "inherits": "nacmake-emscripten-debug-prototyping-base"
+      "inherits": "nactemplate-emscripten-debug-prototyping-base"
     },
     {
       "name": "emscripten-debug-profile",
       "displayName": "emscripten-debug-profile",
-      "inherits": "nacmake-emscripten-debug-profile-base"
+      "inherits": "nactemplate-emscripten-debug-profile-base"
     },
     {
       "name": "emscripten-release",
       "displayName": "emscripten-release",
-      "inherits": "nacmake-emscripten-release-base"
+      "inherits": "nactemplate-emscripten-release-base"
     },
     {
       "name": "emscripten-release-prototyping",
       "displayName": "emscripten-release-prototyping",
-      "inherits": "nacmake-emscripten-release-prototyping-base"
+      "inherits": "nactemplate-emscripten-release-prototyping-base"
     },
     {
       "name": "emscripten-release-profile",
       "displayName": "emscripten-release-profile",
-      "inherits": "nacmake-emscripten-release-profile-base"
+      "inherits": "nactemplate-emscripten-release-profile-base"
     },
     {
       "name": "linux-x64-debug",
       "displayName": "linux-x64-debug",
-      "inherits": "nacmake-linux-x64-debug-base"
+      "inherits": "nactemplate-linux-x64-debug-base"
     },
     {
       "name": "linux-x64-debug-prototyping",
       "displayName": "linux-x64-debug-prototyping",
-      "inherits": "nacmake-linux-x64-debug-prototyping-base"
+      "inherits": "nactemplate-linux-x64-debug-prototyping-base"
     },
     {
       "name": "linux-x64-debug-profile",
       "displayName": "linux-x64-debug-profile",
-      "inherits": "nacmake-linux-x64-debug-profile-base"
+      "inherits": "nactemplate-linux-x64-debug-profile-base"
     },
     {
       "name": "linux-x64-release",
       "displayName": "linux-x64-release",
-      "inherits": "nacmake-linux-x64-release-base"
+      "inherits": "nactemplate-linux-x64-release-base"
     },
     {
       "name": "linux-x64-release-prototyping",
       "displayName": "linux-x64-release-prototyping",
-      "inherits": "nacmake-linux-x64-release-prototyping-base"
+      "inherits": "nactemplate-linux-x64-release-prototyping-base"
     },
     {
       "name": "linux-x64-release-profile",
       "displayName": "linux-x64-release-profile",
-      "inherits": "nacmake-linux-x64-release-profile-base"
+      "inherits": "nactemplate-linux-x64-release-profile-base"
     }
 
   ]
