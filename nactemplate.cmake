@@ -1,0 +1,6 @@
+include(nactemplate/target.cmake)
+include(nactemplate/dependency.cmake)
+include(nactemplate/profile.cmake)
+include(nactemplate/utils.cmake)
+include(nactemplate/warning.cmake)
+include(nactemplate/ipo.cmake)

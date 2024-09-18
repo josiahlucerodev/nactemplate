@@ -63,7 +63,7 @@ function(
 			-Wsuggest-override
 		)
 	else()
-		message("nacmake: unable to enable compiler warnings")
+		message("nactemplate: unable to enable compiler warnings")
 	endif()
 
 	if(${ENABLE_WARNINGS_AS_ERRORS})
@@ -74,7 +74,7 @@ function(
 		elseif(CMAKE_CXX_COMPILER_ID MATCHES ".*GNU")
 		    list(APPEND cxx_warning_flags -Werror)
 		else()
-			message("nacmake: unable to enable compiler warnings as errors")
+			message("nactemplate: unable to enable compiler warnings as errors")
 		endif()
 	endif()
 

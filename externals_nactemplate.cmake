@@ -1,0 +1,6 @@
+include(externals/nactemplate/target.cmake)
+include(externals/nactemplate/dependency.cmake)
+include(externals/nactemplate/profile.cmake)
+include(externals/nactemplate/utils.cmake)
+include(externals/nactemplate/warning.cmake)
+include(externals/nactemplate/ipo.cmake)

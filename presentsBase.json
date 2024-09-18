@@ -18,7 +18,7 @@
       }
     },
     {
-      "name": "nacmake-windows-x64-debug-base",
+      "name": "nactemplate-windows-x64-debug-base",
       "hidden": true,
       "inherits": "windows-base",
       "architecture": {
@@ -27,13 +27,13 @@
       },
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "Debug",
-        "NACMAKE_PROFILE": "FALSE",
-        "NACMAKE_WARNINGS": "TRUE",
-        "NACMAKE_IPO": "TRUE"
+        "NACTEMPLATE_PROFILE": "FALSE",
+        "NACTEMPLATE_WARNINGS": "TRUE",
+        "NACTEMPLATE_IPO": "TRUE"
       }
     },
     {
-      "name": "nacmake-windows-x64-debug-prototyping-base",
+      "name": "nactemplate-windows-x64-debug-prototyping-base",
       "hidden": true,
       "inherits": "windows-base",
       "architecture": {
@@ -42,13 +42,13 @@
       },
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "Debug",
-        "NACMAKE_PROFILE": "FALSE",
-        "NACMAKE_WARNINGS": "FALSE",
-        "NACMAKE_IPO": "FALSE"
+        "NACTEMPLATE_PROFILE": "FALSE",
+        "NACTEMPLATE_WARNINGS": "FALSE",
+        "NACTEMPLATE_IPO": "FALSE"
       }
     },
     {
-      "name": "nacmake-windows-x64-debug-profile-base",
+      "name": "nactemplate-windows-x64-debug-profile-base",
       "hidden": true,
       "inherits": "windows-base",
       "architecture": {
@@ -57,46 +57,46 @@
       },
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "Debug",
-        "NACMAKE_PROFILE": "TRUE",
-        "NACMAKE_WARNINGS": "TRUE",
-        "NACMAKE_IPO": "TRUE"
+        "NACTEMPLATE_PROFILE": "TRUE",
+        "NACTEMPLATE_WARNINGS": "TRUE",
+        "NACTEMPLATE_IPO": "TRUE"
       }
     },
     {
-      "name": "nacmake-windows-x64-release-base",
+      "name": "nactemplate-windows-x64-release-base",
       "hidden": true,
-      "inherits": "nacmake-windows-x64-debug-base",
+      "inherits": "nactemplate-windows-x64-debug-base",
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "Release",
-        "NACMAKE_PROFILE": "FALSE",
-        "NACMAKE_WARNINGS": "TRUE",
-        "NACMAKE_IPO": "TRUE"
+        "NACTEMPLATE_PROFILE": "FALSE",
+        "NACTEMPLATE_WARNINGS": "TRUE",
+        "NACTEMPLATE_IPO": "TRUE"
       }
     },
     {
-      "name": "nacmake-windows-x64-release-prototyping-base",
+      "name": "nactemplate-windows-x64-release-prototyping-base",
       "hidden": true,
-      "inherits": "nacmake-windows-x64-debug-base",
+      "inherits": "nactemplate-windows-x64-debug-base",
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "Release",
-        "NACMAKE_PROFILE": "FALSE",
-        "NACMAKE_WARNINGS": "FALSE",
-        "NACMAKE_IPO": "FALSE"
+        "NACTEMPLATE_PROFILE": "FALSE",
+        "NACTEMPLATE_WARNINGS": "FALSE",
+        "NACTEMPLATE_IPO": "FALSE"
       }
     },
     {
-      "name": "nacmake-windows-x64-release-profile-base",
+      "name": "nactemplate-windows-x64-release-profile-base",
       "hidden": true,
-      "inherits": "nacmake-windows-x64-debug-base",
+      "inherits": "nactemplate-windows-x64-debug-base",
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "Release",
-        "NACMAKE_PROFILE": "TRUE",
-        "NACMAKE_WARNINGS": "FALSE",
-        "NACMAKE_IPO": "FALSE"
+        "NACTEMPLATE_PROFILE": "TRUE",
+        "NACTEMPLATE_WARNINGS": "FALSE",
+        "NACTEMPLATE_IPO": "FALSE"
       }
     },
     {
-      "name": "nacmake-emscripten-base",
+      "name": "nactemplate-emscripten-base",
       "hidden": true,
       "generator": "Ninja",
       "binaryDir": "${sourceDir}/out/build/${presetName}",
@@ -114,73 +114,73 @@
       }
     },
     {
-      "name": "nacmake-emscripten-debug-base",
+      "name": "nactemplate-emscripten-debug-base",
       "hidden": true,
-      "inherits": "nacmake-emscripten-base",
+      "inherits": "nactemplate-emscripten-base",
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "Debug",
-        "NACMAKE_PROFILE": "FALSE",
-        "NACMAKE_WARNINGS": "TRUE",
-        "NACMAKE_IPO": "TRUE"
+        "NACTEMPLATE_PROFILE": "FALSE",
+        "NACTEMPLATE_WARNINGS": "TRUE",
+        "NACTEMPLATE_IPO": "TRUE"
       }
     },
     {
-      "name": "nacmake-emscripten-debug-prototyping-base",
+      "name": "nactemplate-emscripten-debug-prototyping-base",
       "hidden": true,
-      "inherits": "nacmake-emscripten-base",
+      "inherits": "nactemplate-emscripten-base",
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "Debug",
-        "NACMAKE_PROFILE": "FALSE",
-        "NACMAKE_WARNINGS": "FALSE",
-        "NACMAKE_IPO": "FALSE"
+        "NACTEMPLATE_PROFILE": "FALSE",
+        "NACTEMPLATE_WARNINGS": "FALSE",
+        "NACTEMPLATE_IPO": "FALSE"
       }
     },
     {
-      "name": "nacmake-emscripten-debug-profile-base",
+      "name": "nactemplate-emscripten-debug-profile-base",
       "hidden": true,
-      "inherits": "nacmake-emscripten-base",
+      "inherits": "nactemplate-emscripten-base",
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "Debug",
-        "NACMAKE_PROFILE": "TRUE",
-        "NACMAKE_WARNINGS": "TRUE",
-        "NACMAKE_IPO": "TRUE"
+        "NACTEMPLATE_PROFILE": "TRUE",
+        "NACTEMPLATE_WARNINGS": "TRUE",
+        "NACTEMPLATE_IPO": "TRUE"
       }
     },
     {
-      "name": "nacmake-emscripten-release-base",
+      "name": "nactemplate-emscripten-release-base",
       "hidden": true,
-      "inherits": "nacmake-emscripten-base",
+      "inherits": "nactemplate-emscripten-base",
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "Release",
-        "NACMAKE_PROFILE": "FALSE",
-        "NACMAKE_WARNINGS": "TRUE",
-        "NACMAKE_IPO": "TRUE"
+        "NACTEMPLATE_PROFILE": "FALSE",
+        "NACTEMPLATE_WARNINGS": "TRUE",
+        "NACTEMPLATE_IPO": "TRUE"
       }
     },
     {
-      "name": "nacmake-emscripten-release-prototyping-base",
+      "name": "nactemplate-emscripten-release-prototyping-base",
       "hidden": true,
-      "inherits": "nacmake-emscripten-base",
+      "inherits": "nactemplate-emscripten-base",
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "Release",
-        "NACMAKE_PROFILE": "FALSE",
-        "NACMAKE_WARNINGS": "FALSE",
-        "NACMAKE_IPO": "FALSE"
+        "NACTEMPLATE_PROFILE": "FALSE",
+        "NACTEMPLATE_WARNINGS": "FALSE",
+        "NACTEMPLATE_IPO": "FALSE"
       }
     },
     {
-      "name": "nacmake-emscripten-release-profile-base",
+      "name": "nactemplate-emscripten-release-profile-base",
       "hidden": true,
-      "inherits": "nacmake-emscripten-base",
+      "inherits": "nactemplate-emscripten-base",
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "Release",
-        "NACMAKE_PROFILE": "TRUE",
-        "NACMAKE_WARNINGS": "FALSE",
-        "NACMAKE_IPO": "FALSE"
+        "NACTEMPLATE_PROFILE": "TRUE",
+        "NACTEMPLATE_WARNINGS": "FALSE",
+        "NACTEMPLATE_IPO": "FALSE"
       }
     },
     {
-      "name": "nacmake-linux-base",
+      "name": "nactemplate-linux-base",
       "hidden": true,
       "generator": "Ninja",
       "binaryDir": "${sourceDir}/out/build/${presetName}",
@@ -203,81 +203,81 @@
       }
     },
     {
-      "name": "nacmake-linux-x64-debug-base",
+      "name": "nactemplate-linux-x64-debug-base",
       "hidden": true,
-      "inherits": "nacmake-linux-base",
+      "inherits": "nactemplate-linux-base",
       "architecture": {
         "value": "x64",
         "strategy": "external"
       },
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "Debug",
-        "NACMAKE_PROFILE": "FALSE",
-        "NACMAKE_WARNINGS": "TRUE",
-        "NACMAKE_IPO": "TRUE"
+        "NACTEMPLATE_PROFILE": "FALSE",
+        "NACTEMPLATE_WARNINGS": "TRUE",
+        "NACTEMPLATE_IPO": "TRUE"
       }
     },
     {
-      "name": "nacmake-linux-x64-debug-prototyping-base",
+      "name": "nactemplate-linux-x64-debug-prototyping-base",
       "hidden": true,
-      "inherits": "nacmake-linux-base",
+      "inherits": "nactemplate-linux-base",
       "architecture": {
         "value": "x64",
         "strategy": "external"
       },
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "Debug",
-        "NACMAKE_PROFILE": "FALSE",
-        "NACMAKE_WARNINGS": "FALSE",
-        "NACMAKE_IPO": "FALSE"
+        "NACTEMPLATE_PROFILE": "FALSE",
+        "NACTEMPLATE_WARNINGS": "FALSE",
+        "NACTEMPLATE_IPO": "FALSE"
       }
     },
     {
-      "name": "nacmake-linux-x64-debug-profile-base",
+      "name": "nactemplate-linux-x64-debug-profile-base",
       "hidden": true,
-      "inherits": "nacmake-linux-base",
+      "inherits": "nactemplate-linux-base",
       "architecture": {
         "value": "x64",
         "strategy": "external"
       },
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "Debug",
-        "NACMAKE_PROFILE": "TRUE",
-        "NACMAKE_WARNINGS": "TRUE",
-        "NACMAKE_IPO": "TRUE"
+        "NACTEMPLATE_PROFILE": "TRUE",
+        "NACTEMPLATE_WARNINGS": "TRUE",
+        "NACTEMPLATE_IPO": "TRUE"
       }
     },
     {
-      "name": "nacmake-linux-x64-release-base",
+      "name": "nactemplate-linux-x64-release-base",
       "hidden": true,
-      "inherits": "nacmake-linux-x64-debug-base",
+      "inherits": "nactemplate-linux-x64-debug-base",
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "Release",
-        "NACMAKE_PROFILE": "FALSE",
-        "NACMAKE_WARNINGS": "TRUE",
-        "NACMAKE_IPO": "TRUE"
+        "NACTEMPLATE_PROFILE": "FALSE",
+        "NACTEMPLATE_WARNINGS": "TRUE",
+        "NACTEMPLATE_IPO": "TRUE"
       }
     },
     {
-      "name": "nacmake-linux-x64-release-prototyping-base",
+      "name": "nactemplate-linux-x64-release-prototyping-base",
       "hidden": true,
-      "inherits": "nacmake-linux-x64-debug-base",
+      "inherits": "nactemplate-linux-x64-debug-base",
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "Release",
-        "NACMAKE_PROFILE": "FALSE",
-        "NACMAKE_WARNINGS": "FALSE",
-        "NACMAKE_IPO": "FALSE"
+        "NACTEMPLATE_PROFILE": "FALSE",
+        "NACTEMPLATE_WARNINGS": "FALSE",
+        "NACTEMPLATE_IPO": "FALSE"
       }
     },
     {
-      "name": "nacmake-linux-x64-release-profile-base",
+      "name": "nactemplate-linux-x64-release-profile-base",
       "hidden": true,
-      "inherits": "nacmake-linux-x64-debug-base",
+      "inherits": "nactemplate-linux-x64-debug-base",
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "Release",
-        "NACMAKE_PROFILE": "TRUE",
-        "NACMAKE_WARNINGS": "FALSE",
-        "NACMAKE_IPO": "FALSE"
+        "NACTEMPLATE_PROFILE": "TRUE",
+        "NACTEMPLATE_WARNINGS": "FALSE",
+        "NACTEMPLATE_IPO": "FALSE"
       }
     },
     {
