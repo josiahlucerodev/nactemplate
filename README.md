@@ -10,7 +10,7 @@
 </div>
 
 ## About 
-This project (nactemplate) provides a template for the configuration of the cpp programming langauage and is the primary template for the novo affect software stack. 
+This project (nactemplate) provides a template for the configuration of cpp programming language projects and is the primary template for the novo affect software stack.
 
 Whats Provided:
 * Header and Source scanner 
