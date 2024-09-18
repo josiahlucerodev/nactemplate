@@ -19,8 +19,8 @@ Whats Provided:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## Dependences
-* python
-* cmake
+## Build Dependences
+* [python](https://www.python.org)
+* [cmake](https://cmake.org)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
