@@ -1,0 +1,146 @@
+AccessModifierOffset: 4
+AlignAfterOpenBracket: DontAlign
+ContinuationIndentWidth: 4
+AlignArrayOfStructures: AIAS_Left
+AlignConsecutiveAssignments: 
+    Enabled: false
+AlignConsecutiveBitFields: 
+    Enabled: true
+    AcrossEmptyLines: false
+    AcrossComments: false
+AlignConsecutiveDeclarations
+    Enabled: false
+AlignConsecutiveMacros 
+    Enabled: false
+AlignConsecutiveShortCaseStatements:
+    Enabled: true
+    AcrossEmptyLines: true
+    AcrossComments: true
+    AlignCaseArrows: true
+    AlignCaseColons: true
+AlignConsecutiveTableGenBreakingDAGArgColons: 
+    Enabled: false
+AlignConsecutiveTableGenCondOperatorColons:
+    Enabled: false
+AlignConsecutiveTableGenDefinitionColons:
+    Enabled: false
+AlignEscapedNewlines: ENAS_Left
+    AlignOperands: OAS_AlignAfterOperator  
+TrailingCommentsAlignmentStyle: 
+    Kind: TCAS_Leave 
+AllowAllArgumentsOnNextLine: true
+AllowAllParametersOfDeclarationOnNextLine: true
+AllowBreakBeforeNoexceptSpecifier: BBNSS_OnlyWithParen 
+AllowShortBlocksOnASingleLine: SBS_Never 
+AllowShortCaseExpressionOnASingleLine: true
+AllowShortCaseLabelsOnASingleLine: true
+AllowShortCompoundRequirementOnASingleLine: true
+AllowShortEnumsOnASingleLine: false
+AllowShortFunctionsOnASingleLine: SFS_InlineOnly 
+AllowShortIfStatementsOnASingleLine: SIS_Never 
+AllowShortLambdasOnASingleLine: SLS_Inline 
+AllowShortLoopsOnASingleLine: false
+AlwaysBreakBeforeMultilineStrings: false
+AttributeMacros: []
+BinPackArguments: true
+BinPackParameters: BPPS_BinPack 
+BitFieldColonSpacing: BFCS_Both 
+BreakBeforeBraces: false
+BracedInitializerIndentWidth: 4
+BreakAdjacentStringLiterals: false
+BreakAfterAttributes: ABS_Never 
+BreakAfterReturnType: RTBS_ExceptShortType 
+BreakArrays: false
+BreakBeforeBraces: BS_Attach 
+BreakBeforeConceptDeclarations: BBCDS_Always 
+BreakBeforeInlineASMColon: BBIAS_OnlyMultiline 
+BreakBeforeTernaryOperators: true
+BreakBinaryOperations: BBO_RespectPrecedence 
+BreakConstructorInitializers: BCIS_BeforeColon 
+BreakFunctionDefinitionParameters: false
+BreakInheritanceList: BILS_BeforeColon 
+BreakStringLiterals: false:
+BreakTemplateDeclarations: BTDS_MultiLine 
+ColumnLimit: 150
+CompactNamespaces: false
+ConstructorInitializerIndentWidth: 4
+ContinuationIndentWidth: 4
+Cpp11BracedListStyle: true
+DerivePointerAlignment: true 
+EmptyLineAfterAccessModifier: ELBAMS_Never  
+EmptyLineBeforeAccessModifier: ELAAMS_Always
+FixNamespaceComments: true
+ForEachMacros: []
+IfMacros: []
+IncludeBlocks: IBS_Preserve 
+IndentAccessModifiers: false
+IndentCaseBlocks: false
+IndentCaseLabels: true
+IndentExternBlock: IEBS_Indent 
+IndentGotoLabels: true
+IndentPPDirectives: PPDIS_None 
+IndentRequiresClause: true
+IndentWidth: 4
+IndentWrappedFunctionNames: true
+InsertBraces: true
+InsertNewlineAtEOF: true
+InsertTrailingCommas: TCS_None 
+IntegerLiteralSeparator:
+    Binary: -1
+    Decimal: 3
+    Hex: -1
+KeepEmptyLines: 
+    AtEndOfFile: false
+  AtStartOfBlock: false
+  AtStartOfFile: false
+LambdaBodyIndentation: LBI_Signature 
+Language: LK_Cpp 
+LineEnding: LE_CRLF 
+Macros: []
+MainIncludeChar: MICD_Any 
+MaxEmptyLinesToKeep: 1
+NamespaceIndentation: NI_All 
+NamespaceMacros: []
+PPIndentWidth: 1
+PackConstructorInitializers: PCIS_BinPack 
+PointerAlignment: PAS_Left 
+QualifierAlignment: QAS_Left 
+QAS_Custom: [friend, constexpr, inline, static, const, volatile, restrict, type]
+ReferenceAlignment: RAS_Left 
+ReflowComments: true
+RemoveBracesLLVM: false
+RemoveParentheses: true
+RemoveSemicolon: true
+RequiresClausePosition: RCPS_OwnLine 
+RequiresExpressionIndentation: REI_OuterScope 
+SeparateDefinitionBlocks: SDS_Never 
+ShortNamespaceLines: 1
+SkipMacroDefinitionBody: true
+SortIncludes: SI_CaseSensitive
+SortUsingDeclarations: SUD_LexicographicNumeric 
+SpaceAfterCStyleCast: true
+SpaceAfterLogicalNot: false
+SpaceAfterTemplateKeyword: false
+SpaceAroundPointerQualifiers: SAPQ_Default 
+SpaceBeforeAssignmentOperators: true
+SpaceBeforeCaseColon: false
+SpaceBeforeCpp11BracedList: true
+SpaceBeforeCtorInitializerColon: true
+SpaceBeforeParens: SBPO_ControlStatements 
+SpaceBeforeRangeBasedForLoopColon: true
+SpaceInEmptyBlock: false
+SpacesBeforeTrailingComments: 1
+SpacesInAngles: SIAS_Never
+SpacesInContainerLiterals: false
+SpacesInLineCommentPrefix: false
+SpacesInParens: SIPO_Never 
+SpacesInSquareBrackets: false
+Standard: LS_Latest 
+StatementAttributeLikeMacros: []
+StatementMacros: []
+TabWidth: 4
+TypeNames: []
+TypenameMacros: []
+UseTab: AlignWithSpaces
+VerilogBreakBetweenInstancePorts: false
+WhitespaceSensitiveMacros: []
