@@ -1,0 +1,502 @@
+{
+    "version": 4,
+    "configurePresets": [
+        {
+            "name": "warnings",
+            "hidden": true,
+            "cacheVariables": {
+                "NACTEMPLATE_WARNINGS": "TRUE"
+            }
+        },
+        {
+            "name": "profile",
+            "hidden": true,
+            "cacheVariables": {
+                "NACTEMPLATE_PROFILE": "TRUE"
+            }
+        },
+        {
+            "name": "ipo",
+            "hidden": true,
+            "cacheVariables": {
+                "NACTEMPLATE_IPO": "TRUE"
+            }
+        },
+        {
+            "name": "coverage",
+            "hidden": true,
+            "cacheVariables": {
+                "NACTEMPLATE_COVERAGE": "TRUE"
+            }
+        },
+        {
+            "name": "fuzz",
+            "hidden": true,
+            "cacheVariables": {
+                "NACTEMPLATE_FUZZ": "TRUE"
+            }
+        },
+        {
+            "name": "test",
+            "hidden": true,
+            "cacheVariables": {
+                "NACTEMPLATE_TEST": "TRUE"
+            }
+        },
+        {
+            "name": "address_sanitizer",
+            "hidden": true,
+            "cacheVariables": {
+                "NACTEMPLATE_ADDRESS_SANITIZER": "TRUE"
+            }
+        },
+        {
+            "name": "leak_sanitizer",
+            "hidden": true,
+            "cacheVariables": {
+                "NACTEMPLATE_LEAK_SANITIZER": "TRUE"
+            }
+        },
+        {
+            "name": "undefined_sanitizer",
+            "hidden": true,
+            "cacheVariables": {
+                "NACTEMPLATE_UNDEFINED_SANITIZER": "TRUE"
+            }
+        },
+        {
+            "name": "thread_sanitizer",
+            "hidden": true,
+            "cacheVariables": {
+                "NACTEMPLATE_THREAD_SANITIZER": "TRUE"
+            }
+        },
+        {
+            "name": "memory_sanitizer",
+            "hidden": true,
+            "cacheVariables": {
+                "NACTEMPLATE_MEMORY_SANITIZER": "TRUE"
+            }
+        },
+        {
+            "name": "windows-x64-default",
+            "hidden": true,
+            "binaryDir": "${sourceDir}/out/build/${presetName}",
+            "installDir": "${sourceDir}/out/install/${presetName}",
+            "generator": "Ninja",
+            "architecture": {
+                "value": "x64",
+                "strategy": "external"
+            },
+            "condition": {
+                "type": "equals",
+                "lhs": "${hostSystemName}",
+                "rhs": "Windows"
+            }
+        },
+        {
+            "name": "windows-x64-msvc",
+            "hidden": true,
+            "binaryDir": "${sourceDir}/out/build/${presetName}",
+            "installDir": "${sourceDir}/out/install/${presetName}",
+            "generator": "Ninja",
+            "architecture": {
+                "value": "x64",
+                "strategy": "external"
+            },
+            "condition": {
+                "type": "equals",
+                "lhs": "${hostSystemName}",
+                "rhs": "Windows"
+            },
+            "cacheVariables": {
+                "CMAKE_C_COMPILER": "cl.exe",
+                "CMAKE_CXX_COMPILER": "cl.exe",
+                "CMAKE_BUILD_TYPE": "Debug"
+            },
+            "environment": {
+                "CC": "cl.exe",
+                "CXX": "cl.exe"
+            }
+        },
+        {
+            "name": "windows-x64-clang",
+            "hidden": true,
+            "binaryDir": "${sourceDir}/out/build/${presetName}",
+            "installDir": "${sourceDir}/out/install/${presetName}",
+            "generator": "Ninja",
+            "architecture": {
+                "value": "x64",
+                "strategy": "external"
+            },
+            "condition": {
+                "type": "equals",
+                "lhs": "${hostSystemName}",
+                "rhs": "Windows"
+            },
+            "cacheVariables": {
+                "CMAKE_C_COMPILER": "clang-cl",
+                "CMAKE_CXX_COMPILER": "clang-cl"
+            },
+            "environment": {
+                "CC": "clang-cl",
+                "CXX": "clang-cl"
+            }
+        },
+        {
+            "name": "linux-x64",
+            "hidden": true,
+            "binaryDir": "${sourceDir}/out/build/${presetName}",
+            "installDir": "${sourceDir}/out/install/${presetName}",
+            "generator": "Ninja",
+            "architecture": {
+                "value": "x64",
+                "strategy": "external"
+            },
+            "condition": {
+                "type": "equals",
+                "lhs": "${hostSystemName}",
+                "rhs": "Linux"
+            },
+            "vendor": {
+                "microsoft.com/VisualStudioSettings/CMake/1.0": {
+                    "hostOS": [
+                        "Linux"
+                    ]
+                },
+                "microsoft.com/VisualStudioRemoteSettings/CMake/1.0": {
+                    "sourceDir": "$env{HOME}/.vs/$ms{projectDirName}"
+                }
+            }
+        },
+        {
+            "name": "web-wasm",
+            "hidden": true,
+            "binaryDir": "${sourceDir}/out/build/${presetName}",
+            "installDir": "${sourceDir}/out/install/${presetName}",
+            "generator": "Ninja",
+            "toolchainFile": "$env{EMSDK}/upstream/emscripten/cmake/Modules/Platform/Emscripten.cmake",
+            "vendor": {
+                "microsoft.com/VisualStudioSettings/CMake/1.0": {
+                    "intelliSenseMode": "windows-clang-x64"
+                },
+                "condition": {
+                    "type": "matches",
+                    "string": "$env{EMSDK}",
+                    "regex": "emsdk"
+                }
+            }
+        },
+        {
+            "name": "debug",
+            "hidden": true,
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Debug"
+            }
+        },
+        {
+            "name": "release",
+            "hidden": true,
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Release"
+            }
+        },
+        {
+            "name": "prototype",
+            "hidden": true,
+            "inherits": [
+                "test",
+                "coverage"
+            ]
+        },
+        {
+            "name": "testing",
+            "hidden": true,
+            "inherits": [
+                "test",
+                "fuzz",
+                "coverage",
+                "profile",
+                "warnings"
+            ]
+        },
+        {
+            "name": "optimized",
+            "hidden": true,
+            "inherits": [
+                "warnings",
+                "ipo"
+            ]
+        },
+        {
+            "name": "windows-x64-default-debug-prototype",
+            "hidden": false,
+            "inherits": [
+                "windows-x64-default",
+                "debug",
+                "prototype"
+            ]
+        },
+        {
+            "name": "windows-x64-default-debug-testing",
+            "hidden": false,
+            "inherits": [
+                "windows-x64-default",
+                "debug",
+                "testing"
+            ]
+        },
+        {
+            "name": "windows-x64-default-debug-optimized",
+            "hidden": false,
+            "inherits": [
+                "windows-x64-default",
+                "debug",
+                "optimized"
+            ]
+        },
+        {
+            "name": "windows-x64-default-release-prototype",
+            "hidden": false,
+            "inherits": [
+                "windows-x64-default",
+                "release",
+                "prototype"
+            ]
+        },
+        {
+            "name": "windows-x64-default-release-testing",
+            "hidden": false,
+            "inherits": [
+                "windows-x64-default",
+                "release",
+                "testing"
+            ]
+        },
+        {
+            "name": "windows-x64-default-release-optimized",
+            "hidden": false,
+            "inherits": [
+                "windows-x64-default",
+                "release",
+                "optimized"
+            ]
+        },
+        {
+            "name": "windows-x64-msvc-debug-prototype",
+            "hidden": false,
+            "inherits": [
+                "windows-x64-msvc",
+                "debug",
+                "prototype"
+            ]
+        },
+        {
+            "name": "windows-x64-msvc-debug-testing",
+            "hidden": false,
+            "inherits": [
+                "windows-x64-msvc",
+                "debug",
+                "testing"
+            ]
+        },
+        {
+            "name": "windows-x64-msvc-debug-optimized",
+            "hidden": false,
+            "inherits": [
+                "windows-x64-msvc",
+                "debug",
+                "optimized"
+            ]
+        },
+        {
+            "name": "windows-x64-msvc-release-prototype",
+            "hidden": false,
+            "inherits": [
+                "windows-x64-msvc",
+                "release",
+                "prototype"
+            ]
+        },
+        {
+            "name": "windows-x64-msvc-release-testing",
+            "hidden": false,
+            "inherits": [
+                "windows-x64-msvc",
+                "release",
+                "testing"
+            ]
+        },
+        {
+            "name": "windows-x64-msvc-release-optimized",
+            "hidden": false,
+            "inherits": [
+                "windows-x64-msvc",
+                "release",
+                "optimized"
+            ]
+        },
+        {
+            "name": "windows-x64-clang-debug-prototype",
+            "hidden": false,
+            "inherits": [
+                "windows-x64-clang",
+                "debug",
+                "prototype"
+            ]
+        },
+        {
+            "name": "windows-x64-clang-debug-testing",
+            "hidden": false,
+            "inherits": [
+                "windows-x64-clang",
+                "debug",
+                "testing"
+            ]
+        },
+        {
+            "name": "windows-x64-clang-debug-optimized",
+            "hidden": false,
+            "inherits": [
+                "windows-x64-clang",
+                "debug",
+                "optimized"
+            ]
+        },
+        {
+            "name": "windows-x64-clang-release-prototype",
+            "hidden": false,
+            "inherits": [
+                "windows-x64-clang",
+                "release",
+                "prototype"
+            ]
+        },
+        {
+            "name": "windows-x64-clang-release-testing",
+            "hidden": false,
+            "inherits": [
+                "windows-x64-clang",
+                "release",
+                "testing"
+            ]
+        },
+        {
+            "name": "windows-x64-clang-release-optimized",
+            "hidden": false,
+            "inherits": [
+                "windows-x64-clang",
+                "release",
+                "optimized"
+            ]
+        },
+        {
+            "name": "linux-x64-debug-prototype",
+            "hidden": false,
+            "inherits": [
+                "linux-x64",
+                "debug",
+                "prototype"
+            ]
+        },
+        {
+            "name": "linux-x64-debug-testing",
+            "hidden": false,
+            "inherits": [
+                "linux-x64",
+                "debug",
+                "testing"
+            ]
+        },
+        {
+            "name": "linux-x64-debug-optimized",
+            "hidden": false,
+            "inherits": [
+                "linux-x64",
+                "debug",
+                "optimized"
+            ]
+        },
+        {
+            "name": "linux-x64-release-prototype",
+            "hidden": false,
+            "inherits": [
+                "linux-x64",
+                "release",
+                "prototype"
+            ]
+        },
+        {
+            "name": "linux-x64-release-testing",
+            "hidden": false,
+            "inherits": [
+                "linux-x64",
+                "release",
+                "testing"
+            ]
+        },
+        {
+            "name": "linux-x64-release-optimized",
+            "hidden": false,
+            "inherits": [
+                "linux-x64",
+                "release",
+                "optimized"
+            ]
+        },
+        {
+            "name": "web-wasm-debug-prototype",
+            "hidden": false,
+            "inherits": [
+                "web-wasm",
+                "debug",
+                "prototype"
+            ]
+        },
+        {
+            "name": "web-wasm-debug-testing",
+            "hidden": false,
+            "inherits": [
+                "web-wasm",
+                "debug",
+                "testing"
+            ]
+        },
+        {
+            "name": "web-wasm-debug-optimized",
+            "hidden": false,
+            "inherits": [
+                "web-wasm",
+                "debug",
+                "optimized"
+            ]
+        },
+        {
+            "name": "web-wasm-release-prototype",
+            "hidden": false,
+            "inherits": [
+                "web-wasm",
+                "release",
+                "prototype"
+            ]
+        },
+        {
+            "name": "web-wasm-release-testing",
+            "hidden": false,
+            "inherits": [
+                "web-wasm",
+                "release",
+                "testing"
+            ]
+        },
+        {
+            "name": "web-wasm-release-optimized",
+            "hidden": false,
+            "inherits": [
+                "web-wasm",
+                "release",
+                "optimized"
+            ]
+        }
+    ]
+}
